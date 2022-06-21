@@ -26,9 +26,10 @@ const Hotel = () => {
 
   const {data, loading, error} = useFetch(`http://localhost:8800/api/hotels/find/${hotelId}`);
 
-  const {dates, options} = useContext(SearchContext);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
+  
+  const {dates, options} = useContext(SearchContext);
 
   const MILLISEC_DAY = 1000* 60 * 60 * 24;
   const dayDifference = (date1, date2) => {
@@ -46,6 +47,7 @@ const Hotel = () => {
   };
 
   const handleClick = () => {
+    console.log("CLICKED")
     if(user) {
       setOpenModal(true);
     } else {
@@ -139,7 +141,7 @@ const Hotel = () => {
           <Footer />
         </div>
       </>}
-      {openModal && <ReserveModal setOpen={setOpenModal} hotelId={hotelId}></ReserveModal>}
+      {openModal && <ReserveModal setOpen={setOpenModal} hotelId={hotelId}/>}
     </div>
   );
 };

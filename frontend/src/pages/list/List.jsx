@@ -105,7 +105,7 @@ const List = () => {
             <button onClick={handleClick} >Search</button>
           </div>
           <div className="listResult">
-            <div className="listAddress"> {destination} </div>
+            <div className="listAddress"> {destination}: {data.length} {data.length == 1 ? "Result":"Results"} </div>
             {loading ? "Loading" : 
             <>
               {data.map(item => (
