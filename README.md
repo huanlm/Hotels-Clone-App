@@ -1,1 +1,1 @@
-# Hotels-Booking-App
+# Hotels-Clone-App
