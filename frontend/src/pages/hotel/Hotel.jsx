@@ -24,7 +24,7 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const {data, loading, error} = useFetch(`http://localhost:8800/api/hotels/find/${hotelId}`);
+  const {data, loading, error} = useFetch(`${process.env.REACT_APP_API_URL}/hotels/find/${hotelId}`);
 
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();

@@ -5,7 +5,7 @@ const Featured = () => {
   const city1 = 'San Diego';
   const city2 = 'Los Angeles';
   const city3 = 'New York';
-  const {data, loading, error} = useFetch(`http://localhost:8800/api/hotels/countByCity?cities=${city1},${city2},${city3}`)
+  const {data, loading, error} = useFetch(`${process.env.REACT_APP_API_URL}/hotels/countByCity?cities=${city1},${city2},${city3}`)
 
   return (
     <div className="featured">

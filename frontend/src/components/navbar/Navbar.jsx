@@ -14,6 +14,12 @@ const Navbar = () => {
       navigate("/login")
     else navigate("/register")
   }
+
+  const signOut = () => {
+    localStorage.setItem("user", null);
+    window.location.reload(false);
+  }
+
   return (
     <>
       <div className="navbar">
@@ -24,7 +30,7 @@ const Navbar = () => {
           {user ? 
             <div className="navItems">
               <h3>{user.username}</h3>
-              <button onClick={() => {}} className="navButton">Sign out</button>
+              <button onClick={() => {signOut()}} className="navButton">Sign out</button>
             </div>
             :
             <div className="navItems">

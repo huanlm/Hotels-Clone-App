@@ -6,8 +6,7 @@ import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
 import "./login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faFacebookF, faGoogle } from '@fortawesome/free-brands-svg-icons' 
-import { set } from "date-fns/esm";
+import { faFacebookF, faGoogle } from '@fortawesome/free-brands-svg-icons' 
 
 const Login = ({type}) => {
   const [credentials, setCredentials] = useState({
@@ -27,7 +26,7 @@ const Login = ({type}) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("http://localhost:8800/api/auth/login", credentials);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
       navigate("/")
     } catch (err) {

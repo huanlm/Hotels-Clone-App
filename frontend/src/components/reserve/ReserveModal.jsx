@@ -8,7 +8,7 @@ import "./reserveModal.css";
 
 const ReserveModal = ({setOpen, hotelId}) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const {data, loading, error} = useFetch(`http://localhost:8800/api/hotels/room/${hotelId}`);
+  const {data, loading, error} = useFetch(`${process.env.REACT_APP_API_URL}/hotels/room/${hotelId}`);
   const {dates} = useContext(SearchContext);
 
   const getDatesInRange = (startDate,endDate) => {
@@ -46,7 +46,7 @@ const ReserveModal = ({setOpen, hotelId}) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`http://localhost:8800/api/rooms/availability/${roomId}`, {
+          const res = axios.put(`${process.env.REACT_APP_API_URL}/rooms/availability/${roomId}`, {
             dates: allDates,
           });
           return res.data;
