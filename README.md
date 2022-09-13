@@ -18,24 +18,26 @@ Full Stack application allowing users to look up and reserve hotels from many di
 - Run `npm install`
 - Run `npm start`
 
+
+
 ### Screenshots
 <details>
   <summary>Open to View Images</summary>
   
-  ### Default search with date and custom options
+  ### <a href="https://i.imgur.com/zSArG1F.png">Default search with date and custom options</a>
   <img alt="Default" src="https://i.imgur.com/zSArG1F.png" />
   
-  ### Main page including features and property types
+  ### <a href="https://i.imgur.com/jhPufwV.jpg">Main page including features and property types</a>
   <img alt="Main_Page" src="https://i.imgur.com/jhPufwV.jpg" />
 
-  ### Search Result page with cutomizable fields
+  ### <a href="https://i.imgur.com/W9n8Pxm.jpg">Search Result page with cutomizable fields</a>
   <img alt="Search" src="https://i.imgur.com/W9n8Pxm.jpg" />
   
-  ### Hotels details and image carousel
+  ### <a href="https://i.imgur.com/ckVbH4T.pngg">Hotels details and image carousel</a>
   <img alt="" src="https://i.imgur.com/deO2UFp.jpg" />
   <img alt="alt_text" src="https://i.imgur.com/ckVbH4T.png" />
 
-  ### Login and register pages
+  ### <a href="https://i.imgur.com/Z5gIvjc.jpg">Login and register pages</a>
   <img alt="alt_text" src="https://i.imgur.com/Z5gIvjc.jpg" />
 </details>
 
